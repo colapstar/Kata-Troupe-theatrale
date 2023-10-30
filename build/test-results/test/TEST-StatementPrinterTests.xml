@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="StatementPrinterTests" tests="4" skipped="0" failures="2" errors="0" timestamp="2023-10-30T19:02:53" hostname="DESKTOP-J2E3K14" time="1.567">
+  <properties/>
+  <testcase name="exampleStatementTXT()" classname="StatementPrinterTests" time="0.478"/>
+  <testcase name="exampleStatementHTML()" classname="StatementPrinterTests" time="0.617">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;&lt;!DOCTYPE html&gt;&#10;&lt;html lang=&quot;en&quot;&gt;&#10;&lt;head&gt;&#10;    &lt;meta charset=&quot;UTF-8&quot;&gt;&#10;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&#10;    &lt;title&gt;Invoice&lt;/title&gt;&#10;    &lt;style&gt;&#10;        table, th, td {&#10;            border: 1px solid black;&#10;            border-collapse: collapse;&#10;            padding: 10px;&#10;            text-align: center;&#10;        }&#10;        table {&#10;            width: 60%;&#10;            margin: 20px 0;&#10;        }&#10;        th {&#10;            background-color: #f2f2f2;&#10;        }&#10;    &lt;/style&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;    &lt;h2&gt;Invoice&lt;/h2&gt;&#10;    &lt;p&gt;&lt;b&gt;Client&lt;/b&gt; : BigCo&lt;/p&gt;&#10;&#10;    &lt;table&gt;&#10;&lt;tr&gt;&#10;            &lt;th&gt;Piece&lt;/th&gt;&#10;            &lt;th&gt;Seats sold&lt;/th&gt;&#10;            &lt;th&gt;Price&lt;/th&gt;&#10;        &lt;/tr&gt;&#10;            &lt;tr&gt;&#10;                &lt;td&gt;Hamlet&lt;/td&gt;&#10;                &lt;td&gt;55&lt;/td&gt;&#10;                &lt;td&gt;$650.00&lt;/td&gt;&#10;            &lt;/tr&gt;&#10;            &lt;tr&gt;&#10;                &lt;td&gt;As You Like It&lt;/td&gt;&#10;                &lt;td&gt;35&lt;/td&gt;&#10;                &lt;td&gt;$580.00&lt;/td&gt;&#10;            &lt;/tr&gt;&#10;            &lt;tr&gt;&#10;                &lt;td&gt;Othello&lt;/td&gt;&#10;                &lt;td&gt;40&lt;/td&gt;&#10;                &lt;td&gt;$500.00&lt;/td&gt;&#10;            &lt;/tr&gt;&#10;        &lt;tr&gt;&#10;            &lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Total owed:&lt;/b&gt;&lt;/td&gt;&#10;            &lt;td&gt;&lt;b&gt;$1,730.00&lt;/b&gt;&lt;/td&gt;&#10;        &lt;/tr&gt;&#10;        &lt;tr&gt;&#10;            &lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Fidelity points earned:&lt;/b&gt;&lt;/td&gt;&#10;            &lt;td&gt;&lt;b&gt;47&lt;/b&gt;&lt;/td&gt;&#10;        &lt;/tr&gt;&#10;    &lt;/table&gt;&#10;    &lt;p style=&quot;color:red;&quot;&gt;Payment is required under 30 days. &lt;b&gt;We can break your knees if you don't do so.&lt;/b&gt;&lt;/p&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;&#10;&gt; but was: &lt;&lt;!DOCTYPE html&gt;&#10;&lt;html lang=&quot;en&quot;&gt;&#10;&lt;head&gt;&#10;    &lt;meta charset=&quot;UTF-8&quot;&gt;&#10;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&#10;    &lt;title&gt;Invoice&lt;/title&gt;&#10;    &lt;style&gt;&#10;        table, th, td {&#10;            border: 1px solid black;&#10;            border-collapse: collapse;&#10;            padding: 10px;&#10;            text-align: center;&#10;        }&#10;        table {&#10;            width: 60%;&#10;            margin: 20px 0;&#10;        }&#10;        th {&#10;            background-color: #f2f2f2;&#10;        }&#10;    &lt;/style&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;    &lt;h2&gt;Invoice&lt;/h2&gt;&#10;    &lt;p&gt;&lt;b&gt;Client&lt;/b&gt; : BigCo&lt;/p&gt;&#10;&#10;    &lt;table&gt;&#10;&lt;tr&gt;&#10;            &lt;th&gt;Piece&lt;/th&gt;&#10;            &lt;th&gt;Seats sold&lt;/th&gt;&#10;            &lt;th&gt;Price&lt;/th&gt;&#10;        &lt;/tr&gt;&#10;            &lt;tr&gt;&#10;                &lt;td&gt;Hamlet&lt;/td&gt;&#10;                &lt;td&gt;55&lt;/td&gt;&#10;                &lt;td&gt;650,00??&lt;/td&gt;&#10;            &lt;/tr&gt;&#10;            &lt;tr&gt;&#10;                &lt;td&gt;As You Like It&lt;/td&gt;&#10;                &lt;td&gt;35&lt;/td&gt;&#10;                &lt;td&gt;580,00??&lt;/td&gt;&#10;            &lt;/tr&gt;&#10;            &lt;tr&gt;&#10;                &lt;td&gt;Othello&lt;/td&gt;&#10;                &lt;td&gt;40&lt;/td&gt;&#10;                &lt;td&gt;500,00??&lt;/td&gt;&#10;            &lt;/tr&gt;&#10;        &lt;tr&gt;&#10;            &lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Total owed:&lt;/b&gt;&lt;/td&gt;&#10;            &lt;td&gt;&lt;b&gt;$1,730.00&lt;/b&gt;&lt;/td&gt;&#10;        &lt;/tr&gt;&#10;        &lt;tr&gt;&#10;            &lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Fidelity points earned:&lt;/b&gt;&lt;/td&gt;&#10;            &lt;td&gt;&lt;b&gt;47&lt;/b&gt;&lt;/td&gt;&#10;        &lt;/tr&gt;&#10;    &lt;/table&gt;&#10;    &lt;p style=&quot;color:red;&quot;&gt;Payment is required under 30 days. &lt;b&gt;We can break your knees if you don't do so.&lt;/b&gt;&lt;/p&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;&#10;&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Invoice&lt;/title&gt;
+    &lt;style&gt;
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: center;
+        }
+        table {
+            width: 60%;
+            margin: 20px 0;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;Invoice&lt;/h2&gt;
+    &lt;p&gt;&lt;b&gt;Client&lt;/b&gt; : BigCo&lt;/p&gt;
+
+    &lt;table&gt;
+&lt;tr&gt;
+            &lt;th&gt;Piece&lt;/th&gt;
+            &lt;th&gt;Seats sold&lt;/th&gt;
+            &lt;th&gt;Price&lt;/th&gt;
+        &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Hamlet&lt;/td&gt;
+                &lt;td&gt;55&lt;/td&gt;
+                &lt;td&gt;$650.00&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;As You Like It&lt;/td&gt;
+                &lt;td&gt;35&lt;/td&gt;
+                &lt;td&gt;$580.00&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Othello&lt;/td&gt;
+                &lt;td&gt;40&lt;/td&gt;
+                &lt;td&gt;$500.00&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Total owed:&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;b&gt;$1,730.00&lt;/b&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Fidelity points earned:&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;b&gt;47&lt;/b&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;p style=&quot;color:red;&quot;&gt;Payment is required under 30 days. &lt;b&gt;We can break your knees if you don't do so.&lt;/b&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&gt; but was: &lt;&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Invoice&lt;/title&gt;
+    &lt;style&gt;
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: center;
+        }
+        table {
+            width: 60%;
+            margin: 20px 0;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;Invoice&lt;/h2&gt;
+    &lt;p&gt;&lt;b&gt;Client&lt;/b&gt; : BigCo&lt;/p&gt;
+
+    &lt;table&gt;
+&lt;tr&gt;
+            &lt;th&gt;Piece&lt;/th&gt;
+            &lt;th&gt;Seats sold&lt;/th&gt;
+            &lt;th&gt;Price&lt;/th&gt;
+        &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Hamlet&lt;/td&gt;
+                &lt;td&gt;55&lt;/td&gt;
+                &lt;td&gt;650,00??&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;As You Like It&lt;/td&gt;
+                &lt;td&gt;35&lt;/td&gt;
+                &lt;td&gt;580,00??&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Othello&lt;/td&gt;
+                &lt;td&gt;40&lt;/td&gt;
+                &lt;td&gt;500,00??&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Total owed:&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;b&gt;$1,730.00&lt;/b&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Fidelity points earned:&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;b&gt;47&lt;/b&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;p style=&quot;color:red;&quot;&gt;Payment is required under 30 days. &lt;b&gt;We can break your knees if you don't do so.&lt;/b&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&gt;
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1141)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.approvaltests.reporters.AbstractJUnitReporter.assertEquals(AbstractJUnitReporter.java:24)
+	at org.approvaltests.reporters.AbstractJUnitReporter.report(AbstractJUnitReporter.java:42)
+	at org.approvaltests.reporters.FirstWorkingReporter.report(FirstWorkingReporter.java:33)
+	at org.approvaltests.reporters.FirstWorkingReporter.report(FirstWorkingReporter.java:33)
+	at org.approvaltests.reporters.FirstWorkingReporter.report(FirstWorkingReporter.java:33)
+	at org.approvaltests.approvers.FileApprover.reportFailure(FileApprover.java:47)
+	at org.approvaltests.Approvals.verify(Approvals.java:210)
+	at org.approvaltests.Approvals.verify(Approvals.java:173)
+	at org.approvaltests.Approvals.verify(Approvals.java:181)
+	at org.approvaltests.Approvals.verify(Approvals.java:48)
+	at org.approvaltests.Approvals.verify(Approvals.java:44)
+	at StatementPrinterTests.exampleStatementHTML(StatementPrinterTests.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="promotionAppliedStatementTXT()" classname="StatementPrinterTests" time="0.311"/>
+  <testcase name="promotionAppliedStatementHTML()" classname="StatementPrinterTests" time="0.158">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;&lt;!DOCTYPE html&gt;&#10;&lt;html lang=&quot;en&quot;&gt;&#10;&lt;head&gt;&#10;    &lt;meta charset=&quot;UTF-8&quot;&gt;&#10;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&#10;    &lt;title&gt;Invoice&lt;/title&gt;&#10;    &lt;style&gt;&#10;        table, th, td {&#10;            border: 1px solid black;&#10;            border-collapse: collapse;&#10;            padding: 10px;&#10;            text-align: center;&#10;        }&#10;        table {&#10;            width: 60%;&#10;            margin: 20px 0;&#10;        }&#10;        th {&#10;            background-color: #f2f2f2;&#10;        }&#10;    &lt;/style&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;    &lt;h2&gt;Invoice&lt;/h2&gt;&#10;    &lt;p&gt;&lt;b&gt;Client&lt;/b&gt; : BigCo&lt;/p&gt;&#10;&#10;    &lt;table&gt;&#10;&lt;tr&gt;&#10;            &lt;th&gt;Piece&lt;/th&gt;&#10;            &lt;th&gt;Seats sold&lt;/th&gt;&#10;            &lt;th&gt;Price&lt;/th&gt;&#10;        &lt;/tr&gt;&#10;            &lt;tr&gt;&#10;                &lt;td&gt;Hamlet&lt;/td&gt;&#10;                &lt;td&gt;55&lt;/td&gt;&#10;                &lt;td&gt;$650.00&lt;/td&gt;&#10;            &lt;/tr&gt;&#10;            &lt;tr&gt;&#10;                &lt;td&gt;As You Like It&lt;/td&gt;&#10;                &lt;td&gt;35&lt;/td&gt;&#10;                &lt;td&gt;$580.00&lt;/td&gt;&#10;            &lt;/tr&gt;&#10;            &lt;tr&gt;&#10;                &lt;td&gt;Othello&lt;/td&gt;&#10;                &lt;td&gt;40&lt;/td&gt;&#10;                &lt;td&gt;$500.00&lt;/td&gt;&#10;            &lt;/tr&gt;&#10;        &lt;tr&gt;&#10;            &lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Total owed:&lt;/b&gt;&lt;/td&gt;&#10;            &lt;td&gt;&lt;b&gt;$1,715.00&lt;/b&gt;&lt;/td&gt;&#10;        &lt;/tr&gt;&#10;        &lt;tr&gt;&#10;            &lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Fidelity points earned:&lt;/b&gt;&lt;/td&gt;&#10;            &lt;td&gt;&lt;b&gt;52&lt;/b&gt;&lt;/td&gt;&#10;        &lt;/tr&gt;&#10;    &lt;/table&gt;&#10;        &lt;p&gt;A promotion of $15 has been applied to your invoice due to your fidelity points.&lt;/p&gt;&#10;    &lt;p style=&quot;color:red;&quot;&gt;Payment is required under 30 days. &lt;b&gt;We can break your knees if you don't do so.&lt;/b&gt;&lt;/p&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;&#10;&gt; but was: &lt;&lt;!DOCTYPE html&gt;&#10;&lt;html lang=&quot;en&quot;&gt;&#10;&lt;head&gt;&#10;    &lt;meta charset=&quot;UTF-8&quot;&gt;&#10;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&#10;    &lt;title&gt;Invoice&lt;/title&gt;&#10;    &lt;style&gt;&#10;        table, th, td {&#10;            border: 1px solid black;&#10;            border-collapse: collapse;&#10;            padding: 10px;&#10;            text-align: center;&#10;        }&#10;        table {&#10;            width: 60%;&#10;            margin: 20px 0;&#10;        }&#10;        th {&#10;            background-color: #f2f2f2;&#10;        }&#10;    &lt;/style&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;    &lt;h2&gt;Invoice&lt;/h2&gt;&#10;    &lt;p&gt;&lt;b&gt;Client&lt;/b&gt; : BigCo&lt;/p&gt;&#10;&#10;    &lt;table&gt;&#10;&lt;tr&gt;&#10;            &lt;th&gt;Piece&lt;/th&gt;&#10;            &lt;th&gt;Seats sold&lt;/th&gt;&#10;            &lt;th&gt;Price&lt;/th&gt;&#10;        &lt;/tr&gt;&#10;            &lt;tr&gt;&#10;                &lt;td&gt;Hamlet&lt;/td&gt;&#10;                &lt;td&gt;55&lt;/td&gt;&#10;                &lt;td&gt;650,00??&lt;/td&gt;&#10;            &lt;/tr&gt;&#10;            &lt;tr&gt;&#10;                &lt;td&gt;As You Like It&lt;/td&gt;&#10;                &lt;td&gt;35&lt;/td&gt;&#10;                &lt;td&gt;580,00??&lt;/td&gt;&#10;            &lt;/tr&gt;&#10;            &lt;tr&gt;&#10;                &lt;td&gt;Othello&lt;/td&gt;&#10;                &lt;td&gt;40&lt;/td&gt;&#10;                &lt;td&gt;500,00??&lt;/td&gt;&#10;            &lt;/tr&gt;&#10;        &lt;tr&gt;&#10;            &lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Total owed:&lt;/b&gt;&lt;/td&gt;&#10;            &lt;td&gt;&lt;b&gt;$1,715.00&lt;/b&gt;&lt;/td&gt;&#10;        &lt;/tr&gt;&#10;        &lt;tr&gt;&#10;            &lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Fidelity points earned:&lt;/b&gt;&lt;/td&gt;&#10;            &lt;td&gt;&lt;b&gt;52&lt;/b&gt;&lt;/td&gt;&#10;        &lt;/tr&gt;&#10;    &lt;/table&gt;&#10;        &lt;p&gt;A promotion of $15 has been applied to your invoice due to your fidelity points.&lt;/p&gt;&#10;    &lt;p style=&quot;color:red;&quot;&gt;Payment is required under 30 days. &lt;b&gt;We can break your knees if you don't do so.&lt;/b&gt;&lt;/p&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;&#10;&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Invoice&lt;/title&gt;
+    &lt;style&gt;
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: center;
+        }
+        table {
+            width: 60%;
+            margin: 20px 0;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;Invoice&lt;/h2&gt;
+    &lt;p&gt;&lt;b&gt;Client&lt;/b&gt; : BigCo&lt;/p&gt;
+
+    &lt;table&gt;
+&lt;tr&gt;
+            &lt;th&gt;Piece&lt;/th&gt;
+            &lt;th&gt;Seats sold&lt;/th&gt;
+            &lt;th&gt;Price&lt;/th&gt;
+        &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Hamlet&lt;/td&gt;
+                &lt;td&gt;55&lt;/td&gt;
+                &lt;td&gt;$650.00&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;As You Like It&lt;/td&gt;
+                &lt;td&gt;35&lt;/td&gt;
+                &lt;td&gt;$580.00&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Othello&lt;/td&gt;
+                &lt;td&gt;40&lt;/td&gt;
+                &lt;td&gt;$500.00&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Total owed:&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;b&gt;$1,715.00&lt;/b&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Fidelity points earned:&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;b&gt;52&lt;/b&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+        &lt;p&gt;A promotion of $15 has been applied to your invoice due to your fidelity points.&lt;/p&gt;
+    &lt;p style=&quot;color:red;&quot;&gt;Payment is required under 30 days. &lt;b&gt;We can break your knees if you don't do so.&lt;/b&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&gt; but was: &lt;&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Invoice&lt;/title&gt;
+    &lt;style&gt;
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: center;
+        }
+        table {
+            width: 60%;
+            margin: 20px 0;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;Invoice&lt;/h2&gt;
+    &lt;p&gt;&lt;b&gt;Client&lt;/b&gt; : BigCo&lt;/p&gt;
+
+    &lt;table&gt;
+&lt;tr&gt;
+            &lt;th&gt;Piece&lt;/th&gt;
+            &lt;th&gt;Seats sold&lt;/th&gt;
+            &lt;th&gt;Price&lt;/th&gt;
+        &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Hamlet&lt;/td&gt;
+                &lt;td&gt;55&lt;/td&gt;
+                &lt;td&gt;650,00??&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;As You Like It&lt;/td&gt;
+                &lt;td&gt;35&lt;/td&gt;
+                &lt;td&gt;580,00??&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Othello&lt;/td&gt;
+                &lt;td&gt;40&lt;/td&gt;
+                &lt;td&gt;500,00??&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Total owed:&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;b&gt;$1,715.00&lt;/b&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Fidelity points earned:&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;b&gt;52&lt;/b&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+        &lt;p&gt;A promotion of $15 has been applied to your invoice due to your fidelity points.&lt;/p&gt;
+    &lt;p style=&quot;color:red;&quot;&gt;Payment is required under 30 days. &lt;b&gt;We can break your knees if you don't do so.&lt;/b&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&gt;
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1141)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.approvaltests.reporters.AbstractJUnitReporter.assertEquals(AbstractJUnitReporter.java:24)
+	at org.approvaltests.reporters.AbstractJUnitReporter.report(AbstractJUnitReporter.java:42)
+	at org.approvaltests.reporters.FirstWorkingReporter.report(FirstWorkingReporter.java:33)
+	at org.approvaltests.reporters.FirstWorkingReporter.report(FirstWorkingReporter.java:33)
+	at org.approvaltests.reporters.FirstWorkingReporter.report(FirstWorkingReporter.java:33)
+	at org.approvaltests.approvers.FileApprover.reportFailure(FileApprover.java:47)
+	at org.approvaltests.Approvals.verify(Approvals.java:210)
+	at org.approvaltests.Approvals.verify(Approvals.java:173)
+	at org.approvaltests.Approvals.verify(Approvals.java:181)
+	at org.approvaltests.Approvals.verify(Approvals.java:48)
+	at org.approvaltests.Approvals.verify(Approvals.java:44)
+	at StatementPrinterTests.promotionAppliedStatementHTML(StatementPrinterTests.java:103)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <system-out><![CDATA[[30 oct. 2023, 20:02:54 ~000000ms] To approve run : move /Y "C:\Users\Moran\Desktop\Julien\refactoring-tp2-gl-master\.\src\test\java\StatementPrinterTests.exampleStatementHTML.received.txt"  "C:\Users\Moran\Desktop\Julien\refactoring-tp2-gl-master\.\src\test\java\StatementPrinterTests.exampleStatementHTML.approved.txt"
+[30 oct. 2023, 20:02:54 ~000555ms] To approve run : move /Y "C:\Users\Moran\Desktop\Julien\refactoring-tp2-gl-master\.\src\test\java\StatementPrinterTests.promotionAppliedStatementHTML.received.txt"  "C:\Users\Moran\Desktop\Julien\refactoring-tp2-gl-master\.\src\test\java\StatementPrinterTests.promotionAppliedStatementHTML.approved.txt"
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
